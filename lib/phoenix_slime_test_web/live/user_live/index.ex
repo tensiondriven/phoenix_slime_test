@@ -5,6 +5,11 @@ defmodule PhoenixSlimeTestWeb.UserLive.Index do
   alias PhoenixSlimeTest.Accounts.User
 
   @impl true
+  def render(assigns) do
+    Phoenix.View.render(PhoenixSlimeTestWeb.UserView, "index.html", assigns)
+  end
+
+  @impl true
   def mount(_params, _session, socket) do
     {:ok, assign(socket, :users, list_users())}
   end
