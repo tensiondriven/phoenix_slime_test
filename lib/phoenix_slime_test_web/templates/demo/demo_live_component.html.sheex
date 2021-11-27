@@ -1,0 +1,4 @@
+div style="background-color: #ddd; margin: 12px; padding: 12px; border-radius: 12px;"
+  div Demo LiveComponent
+  div
+    = @content

@@ -1,0 +1,40 @@
+h2 Template Variables
+div style="margin-left: 24px;"
+  tt expression
+  p
+    = @name
+
+  tt inline expression with interpolation
+  p
+    | Inline #{@name}
+
+  tt Attribute in enclosing tag
+  div name=@name
+    | tag with attribute
+
+  p
+
+  tt Attribute with interpolated value in enclosing tag
+  h3 name="name-#{@name}"
+    | tag with interpolated attribute value
+
+
+h2 Function Components
+div style="margin-left: 24px;"
+  tt PhoenixSlimeTestWeb.DemoFunctionComponent.greet name=@name
+  :PhoenixSlimeTestWeb.DemoFunctionComponent.greet name=@name
+
+  tt greet name=@name
+  :greet name=@name
+
+h2 Live Components
+div style="margin-left: 24px;"
+  tt live_component with full path in attribute value
+  :live_component module=PhoenixSlimeTestWeb.DemoLiveComponent id="component-1" content=@name
+
+  tt live_component with module in assign
+  :live_component module=@module id="component-2" content=@name
+
+  tt live_component inside .form
+  :form for=@changeset
+    :live_component module=DemoLiveComponent id="component-3" content=@name
