@@ -40,6 +40,7 @@ defmodule PhoenixSlimeTest.MixProject do
       {:phoenix_html, "~> 3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.17.0"},
+      {:phoenix_slime, github: "tensiondriven/phoenix_slime"},
       {:floki, ">= 0.30.0", only: :test},
       {:phoenix_live_dashboard, "~> 0.6.1"},
       {:esbuild, "~> 0.2", runtime: Mix.env() == :dev},
