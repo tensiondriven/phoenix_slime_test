@@ -27,6 +27,7 @@ defmodule PhoenixSlimeTestWeb.Router do
     live "/users/:id/show/edit", UserLive.Show, :edit
 
     live "/demo", DemoLive
+    live "/demo/implicit-render", DemoImplicitRenderLive
   end
 
 
